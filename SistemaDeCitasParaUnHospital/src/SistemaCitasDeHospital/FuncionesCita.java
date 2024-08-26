@@ -11,4 +11,25 @@ public class FuncionesCita {
     public void setCitas (ArrayList<Cita> citas){
         this.citas=citas;
     }
+    public void addCita(Cita a){
+        citas.add(a);
+    }
+    private int buscarCita(String id){
+        int indexOf = 0;
+           for (Cita c : citas) {
+               if(c.getIdDeCita().equals(id)){
+                   indexOf = citas.indexOf(c);
+               }
+           }
+           return indexOf;
+    }
+    public void actualizarCita(String id, String nombreDelPaciente, String idDelPaciente,
+            String especialidad, String fecha, String hora, boolean estado){
+        citas.get(buscarCita(id)).setEspecialidad(especialidad);
+        citas.get(buscarCita(id)).setEstado(estado);
+        citas.get(buscarCita(id)).setFecha(fecha);
+        citas.get(buscarCita(id)).setHora(hora);
+        citas.get(buscarCita(id)).setIdDelPaciente(idDelPaciente);
+        citas.get(buscarCita(id)).setNombreDelPaciente(nombreDelPaciente);
+    }
 }
