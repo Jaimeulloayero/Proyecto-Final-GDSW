@@ -40,5 +40,25 @@ public class InformacionPaciente {
     public boolean getEstado(){
         return estado;
     }
-    
+    public void setIdDeCita(String idDeCita){
+        this.idDeCita=idDeCita;
+    }
+    public void setNombreDelPaciente(String nombreDelPaciente){
+        this.nombreDelPaciente=nombreDelPaciente;
+    }
+    public void setIdDelPaciente(String idDelPaciente){
+        this.idDelPaciente=idDelPaciente;
+    }
+    public void setEspecialidad(String especialidad){
+        this.especialidad=especialidad;
+    }
+    public void setFecha(String fecha){
+        this.fecha=fecha;
+    }
+    public void setHora(String hora){
+        this.hora=hora;
+    }
+    public void setEstado(boolean estado){
+        this.estado=estado;
+    }
 }
