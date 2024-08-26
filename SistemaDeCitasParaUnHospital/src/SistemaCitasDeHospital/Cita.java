@@ -1,5 +1,5 @@
 package SistemaCitasDeHospital;
-public class InformacionPaciente {
+public class Cita {
     private String idDeCita;
     private String nombreDelPaciente;
     private String idDelPaciente;
@@ -8,7 +8,7 @@ public class InformacionPaciente {
     private String hora;
     private boolean estado;
     
-    public InformacionPaciente(String idDecita, String nombreDelPaciente,
+    public Cita(String idDecita, String nombreDelPaciente,
             String idDelPaciente, String especialidad, String fecha, String hora,
             boolean estado){
         this.especialidad=especialidad;
