@@ -56,6 +56,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         });
 
         jButton3.setText("Mostrar Lista de citas");
+        jButton3.setToolTipText("Muestra una lista de citas \nprogramadas para los pacientes\n");
         jButton3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jButton3MouseMoved(evt);
@@ -68,6 +69,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         });
 
         jButton1.setText("Añadir nueva cita");
+        jButton1.setToolTipText("añade una nueva cita (Ctrl+Shift+N)");
         jButton1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jButton1MouseMoved(evt);
@@ -84,7 +86,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Buscar cita");
+        jButton2.setText("Actualizar Cita");
+        jButton2.setToolTipText("Actualiza los datos de una cita\n");
         jButton2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jButton2MouseMoved(evt);
@@ -106,10 +109,11 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addComponent(jButton1)
-                .addGap(100, 100, 100)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
-                .addComponent(jButton2))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,7 +122,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -169,7 +173,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 151, Short.MAX_VALUE))
                     .addComponent(jDesktopPane1))
                 .addContainerGap())
         );
