@@ -283,7 +283,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        CrearCita c = new CrearCita(this,true);
+        CrearCita c = new CrearCita(Cita);
         c.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

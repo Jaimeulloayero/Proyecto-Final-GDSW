@@ -21,6 +21,10 @@ public class CrearCita extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
     }
+    public CrearCita(Cita nuevaCita) {
+        this(null, true);
+        this.nuevaCita=nuevaCita;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -116,6 +120,11 @@ public class CrearCita extends javax.swing.JDialog {
         jLabel7.setText("Especialidad:");
 
         jButton1.setText("Crear");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar");
 
@@ -255,6 +264,30 @@ public class CrearCita extends javax.swing.JDialog {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String nombreDelPaciente = jTextField1.getText();
+        String IdPaciente = jTextField2.getText();
+        String IdCita = jTextField3.getText();
+        String Especialidad = jTextField4.getText();
+        String Fecha = jTextField5.getText();
+        String Hora = jTextField6.getText();
+        
+        nuevaCita.setNombreDelPaciente(nombreDelPaciente);
+        nuevaCita.setIdDelPaciente(IdPaciente);
+        nuevaCita.setIdDeCita(IdCita);
+        nuevaCita.setEspecialidad(Especialidad);
+        nuevaCita.setFecha(Fecha);
+        nuevaCita.setHora(Hora);
+        
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jTextField6.setText("");        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
