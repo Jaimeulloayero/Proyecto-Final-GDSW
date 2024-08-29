@@ -21,7 +21,7 @@ public class FuncionesCita {
            return indexOf;
     }
     public void actualizarCita(String id, String nombreDelPaciente, String idDelPaciente,
-            String especialidad, String fecha, String hora, boolean estado){
+            String especialidad, String fecha, String hora, String estado){
         citas.get(buscarCita(id)).setEspecialidad(especialidad);
         citas.get(buscarCita(id)).setEstado(estado);
         citas.get(buscarCita(id)).setFecha(fecha);
