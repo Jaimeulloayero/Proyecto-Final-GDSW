@@ -61,4 +61,10 @@ public class Cita {
     public void setEstado(boolean estado){
         this.estado=estado;
     }
+    @Override
+    public String toString(){
+        return "Cita{"+"nombre del paciente: " +nombreDelPaciente+ "id Del Paciente: "+idDelPaciente+
+                "/ id De Cita: "+idDeCita+"/ Fecha: "+fecha+"/ Hora: "+hora+"/ especialidad: "
+                +especialidad+"/ estado: "+estado+" }";
+    }
 }
