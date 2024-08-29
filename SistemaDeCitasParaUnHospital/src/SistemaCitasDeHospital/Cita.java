@@ -8,6 +8,9 @@ public class Cita {
     private String hora;
     private String estado;
     
+    public Cita(){
+    }
+    
     public Cita(String idDecita, String nombreDelPaciente,
             String idDelPaciente, String especialidad, String fecha, String hora,
             String estado){
@@ -19,6 +22,7 @@ public class Cita {
         this.nombreDelPaciente=nombreDelPaciente;
         this.estado=estado;
     }
+    
     public String getIdDeCita(){
         return idDeCita;
     }
