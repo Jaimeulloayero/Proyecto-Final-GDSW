@@ -1,5 +1,6 @@
 package SistemaCitasDeHospital;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Paciente {
@@ -14,5 +15,14 @@ public class Paciente {
     }
     public void addCita(Cita a){
         citas.add(a);
+    }
+    public List<Cita> obtenerCitasProgramadas(){
+        List<Cita> citasProgramadas = new ArrayList<>();
+        for (Cita cita : citas){
+            if("programada".equalsIgnoreCase(cita.getEstado())){
+                citasProgramadas.add(cita);
+            }
+        }
+        return citasProgramadas;
     }
 }

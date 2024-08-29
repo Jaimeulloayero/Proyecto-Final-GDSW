@@ -6,18 +6,18 @@ public class Cita {
     private String especialidad;
     private String fecha;
     private String hora;
-    private boolean estado;
+    private String estado;
     
     public Cita(String idDecita, String nombreDelPaciente,
             String idDelPaciente, String especialidad, String fecha, String hora,
-            boolean estado){
+            String estado){
         this.especialidad=especialidad;
         this.estado=estado;
         this.fecha=fecha;
         this.idDeCita=idDecita;
         this.idDelPaciente=idDelPaciente;
         this.nombreDelPaciente=nombreDelPaciente;
-        this.estado=false;
+        this.estado=estado;
     }
     public String getIdDeCita(){
         return idDeCita;
@@ -37,7 +37,7 @@ public class Cita {
     public String getHora(){
         return hora;
     }
-    public boolean getEstado(){
+    public String getEstado(){
         return estado;
     }
     public void setIdDeCita(String idDeCita){
@@ -58,7 +58,7 @@ public class Cita {
     public void setHora(String hora){
         this.hora=hora;
     }
-    public void setEstado(boolean estado){
+    public void setEstado(String estado){
         this.estado=estado;
     }
     @Override
