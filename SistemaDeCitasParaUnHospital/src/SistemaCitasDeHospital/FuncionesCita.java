@@ -11,9 +11,6 @@ public class FuncionesCita {
     public void setCitas (ArrayList<Cita> citas){
         this.citas=citas;
     }
-    public void addCita(Cita a){
-        citas.add(a);
-    }
     private int buscarCita(String id){
         int indexOf = 0;
            for (Cita c : citas) {
