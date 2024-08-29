@@ -12,4 +12,7 @@ public class Paciente {
         this.idPaciente=idPaciente;
         this.nombre=nombre;
     }
+    public void addCita(Cita a){
+        citas.add(a);
+    }
 }
