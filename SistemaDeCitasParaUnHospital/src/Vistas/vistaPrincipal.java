@@ -13,7 +13,7 @@ import SistemaCitasDeHospital.Cita;
  * @author jaime
  */
 public class vistaPrincipal extends javax.swing.JFrame {
-       private Cita c = new Cita();
+    private Cita cita = new Cita();
     /**
      * Creates new form vistaPrincipal
      */
@@ -283,7 +283,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        CrearCita c = new CrearCita(Cita);
+        CrearCita c = new CrearCita(cita);
         c.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

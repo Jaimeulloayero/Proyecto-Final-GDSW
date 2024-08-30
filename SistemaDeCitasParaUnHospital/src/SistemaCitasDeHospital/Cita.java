@@ -1,33 +1,33 @@
 package SistemaCitasDeHospital;
 public class Cita {
     private String idDeCita;
-    private String nombreDelPaciente;
+    private String nombre;
     private String idDelPaciente;
     private String especialidad;
     private String fecha;
     private String hora;
-    private String estado;
+    private boolean estado;
     
     public Cita(){
     }
     
-    public Cita(String idDecita, String nombreDelPaciente,
+    public Cita(String idDecita, String nombre,
             String idDelPaciente, String especialidad, String fecha, String hora,
-            String estado){
+            boolean estado){
         this.especialidad=especialidad;
         this.estado=estado;
         this.fecha=fecha;
         this.idDeCita=idDecita;
         this.idDelPaciente=idDelPaciente;
-        this.nombreDelPaciente=nombreDelPaciente;
-        this.estado=estado;
+        this.nombre=nombre;
+        this.estado=true;
     }
     
     public String getIdDeCita(){
         return idDeCita;
     }
-    public String getNombreDelPaciente(){
-        return nombreDelPaciente;
+    public String getNombre(){
+        return nombre;
     }
     public String getIdDelPaciente(){
         return idDelPaciente;
@@ -41,14 +41,14 @@ public class Cita {
     public String getHora(){
         return hora;
     }
-    public String getEstado(){
+    public boolean isEstado(){
         return estado;
     }
     public void setIdDeCita(String idDeCita){
         this.idDeCita=idDeCita;
     }
-    public void setNombreDelPaciente(String nombreDelPaciente){
-        this.nombreDelPaciente=nombreDelPaciente;
+    public void setNombre(String nombre){
+        this.nombre=nombre;
     }
     public void setIdDelPaciente(String idDelPaciente){
         this.idDelPaciente=idDelPaciente;
@@ -62,12 +62,12 @@ public class Cita {
     public void setHora(String hora){
         this.hora=hora;
     }
-    public void setEstado(String estado){
+    public void isEstado(boolean estado){
         this.estado=estado;
     }
     @Override
     public String toString(){
-        return "Cita{"+"nombre del paciente: " +nombreDelPaciente+ "id Del Paciente: "+idDelPaciente+
+        return "Cita{"+"nombre del paciente: " +nombre+ "id Del Paciente: "+idDelPaciente+
                 "/ id De Cita: "+idDeCita+"/ Fecha: "+fecha+"/ Hora: "+hora+"/ especialidad: "
                 +especialidad+"/ estado: "+estado+" }";
     }

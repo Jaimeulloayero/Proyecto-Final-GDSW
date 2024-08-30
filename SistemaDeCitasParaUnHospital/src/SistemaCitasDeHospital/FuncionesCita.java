@@ -21,12 +21,12 @@ public class FuncionesCita {
            return indexOf;
     }
     public void actualizarCita(String id, String nombreDelPaciente, String idDelPaciente,
-            String especialidad, String fecha, String hora, String estado){
+            String especialidad, String fecha, String hora, boolean estado){
         citas.get(buscarCita(id)).setEspecialidad(especialidad);
-        citas.get(buscarCita(id)).setEstado(estado);
+        citas.get(buscarCita(id)).isEstado(estado);
         citas.get(buscarCita(id)).setFecha(fecha);
         citas.get(buscarCita(id)).setHora(hora);
         citas.get(buscarCita(id)).setIdDelPaciente(idDelPaciente);
-        citas.get(buscarCita(id)).setNombreDelPaciente(nombreDelPaciente);
+        citas.get(buscarCita(id)).setNombre(nombreDelPaciente);
     }
 }

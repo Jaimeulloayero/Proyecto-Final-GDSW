@@ -7,22 +7,54 @@ public class Paciente {
     private String idPaciente;
     private String nombre;
     private List<Cita> citas;
+    private List<Paciente> pacientes;
     
     public Paciente(String idPaciente, String nombre){
-        this.citas=citas;
+        this.citas= new ArrayList<>();
         this.idPaciente=idPaciente;
         this.nombre=nombre;
+        this.pacientes= new ArrayList<>();
     }
-    public void addCita(Cita a){
-        citas.add(a);
+
+    public Paciente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    public List<Cita> obtenerCitasProgramadas(){
+
+    public String getIdPaciente() {
+        return idPaciente;
+    }
+
+    public void setIdPaciente(String idPaciente) {
+        this.idPaciente = idPaciente;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public List<Cita> getCitas() {
+        return citas;
+    }
+
+    public void setCitas(List<Cita> citas) {
+        this.citas = citas;
+    }
+    
+   
+        public void addpaciente(Paciente a){
+        pacientes.add(a);
+    }
+        
+    public void obtenerCitasProgramadas(){
         List<Cita> citasProgramadas = new ArrayList<>();
         for (Cita cita : citas){
-            if("programada".equalsIgnoreCase(cita.getEstado())){
-                citasProgramadas.add(cita);
+            if(cita.isEstado()){
+                System.out.println(cita);;
             }
         }
-        return citasProgramadas;
     }
 }

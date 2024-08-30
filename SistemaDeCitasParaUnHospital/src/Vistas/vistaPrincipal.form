@@ -204,7 +204,6 @@
               <Image iconType="3" name="/Imagenes/Paciente.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="a&#xf1;ade una nueva cita (Ctrl+Shift+N)"/>
-            <Property name="actionCommand" type="java.lang.String" value=""/>
           </Properties>
           <Events>
             <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseMoved"/>
