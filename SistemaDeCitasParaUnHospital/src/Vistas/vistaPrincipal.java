@@ -7,6 +7,7 @@
 package Vistas;
 
 import SistemaCitasDeHospital.Cita;
+import SistemaCitasDeHospital.FuncionesCita;
 
 /**
  *
@@ -92,7 +93,6 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Paciente.png"))); // NOI18N
         jButton1.setToolTipText("añade una nueva cita (Ctrl+Shift+N)");
-        jButton1.setActionCommand("");
         jButton1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jButton1MouseMoved(evt);
@@ -119,6 +119,11 @@ public class vistaPrincipal extends javax.swing.JFrame {
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jButton2MouseExited(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -326,6 +331,12 @@ public class vistaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        ActualizarCita c = new ActualizarCita(cita);
+        c.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -382,4 +393,5 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     // End of variables declaration//GEN-END:variables
+
 }

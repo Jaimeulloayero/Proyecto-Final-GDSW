@@ -7,8 +7,9 @@
 package Vistas;
 
 import SistemaCitasDeHospital.Cita;
-import SistemaCitasDeHospital.Paciente;
 import java.awt.Color;
+import java.util.Date;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -49,21 +50,19 @@ public class CrearCita extends javax.swing.JDialog {
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jSpinner1 = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Crear Nueva Cita");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), java.awt.Color.black), "Crear Nueva Cita", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 18))); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Permanent Marker", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Nombre del paciente: ");
 
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -77,7 +76,7 @@ public class CrearCita extends javax.swing.JDialog {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Permanent Marker", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("ID del Paciente:");
 
         jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -91,7 +90,7 @@ public class CrearCita extends javax.swing.JDialog {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Permanent Marker", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("ID de la cita:");
 
         jTextField3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -116,35 +115,10 @@ public class CrearCita extends javax.swing.JDialog {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Permanent Marker", 1, 14)); // NOI18N
-        jLabel5.setText("Fecha:");
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("Fecha y Hora:");
 
-        jTextField5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jTextField5MousePressed(evt);
-            }
-        });
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setFont(new java.awt.Font("Permanent Marker", 1, 14)); // NOI18N
-        jLabel6.setText("Hora:");
-
-        jTextField6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jTextField6MousePressed(evt);
-            }
-        });
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setFont(new java.awt.Font("Permanent Marker", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Especialidad:");
 
         jButton1.setText("Crear");
@@ -153,6 +127,8 @@ public class CrearCita extends javax.swing.JDialog {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        jSpinner1.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), new java.util.Date(1725132365055L), null, java.util.Calendar.DAY_OF_MONTH));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -169,14 +145,10 @@ public class CrearCita extends javax.swing.JDialog {
                                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(59, 59, 59)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 164, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,7 +169,7 @@ public class CrearCita extends javax.swing.JDialog {
                                         .addComponent(jLabel3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 11, Short.MAX_VALUE)))))
+                                .addGap(0, 41, Short.MAX_VALUE)))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -229,9 +201,7 @@ public class CrearCita extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(35, 35, 35))
@@ -267,22 +237,12 @@ public class CrearCita extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         if (jTextField1.getText().equals("")
               || jTextField2.getText().equals("")
               || jTextField3.getText().equals("")
-              || jTextField4.getText().equals("")
-              || jTextField5.getText().equals("")
-              || jTextField6.getText().equals("")){
+              || jTextField4.getText().equals("")){
             makeErrorOrNot(true);
             JOptionPane.showMessageDialog(rootPane, "Entre todos los valores");
         }else{
@@ -296,8 +256,6 @@ public class CrearCita extends javax.swing.JDialog {
         jTextField2.setText("");
         jTextField3.setText("");
         jTextField4.setText("");
-        jTextField5.setText("");
-        jTextField6.setText("");
     }
     private void agregarCita(){
         
@@ -305,15 +263,13 @@ public class CrearCita extends javax.swing.JDialog {
         String IdPaciente = jTextField2.getText();
         String IdCita = jTextField3.getText();
         String Especialidad = jTextField4.getText();
-        String Fecha = jTextField5.getText();
-        String Hora = jTextField6.getText();
+        Date fechayHora = (Date) jSpinner1.getModel().getValue();
         
         nuevaCita.setNombre(nombre);
         nuevaCita.setIdDelPaciente(IdPaciente);
         nuevaCita.setIdDeCita(IdCita);
         nuevaCita.setEspecialidad(Especialidad);
-        nuevaCita.setFecha(Fecha);
-        nuevaCita.setHora(Hora);
+        nuevaCita.setFecha(fechayHora);
         
         refrescar();
     }
@@ -327,17 +283,11 @@ public class CrearCita extends javax.swing.JDialog {
                 jTextField3.setBackground(Color.red);
             if (jTextField4.getText().equals(""))
                 jTextField4.setBackground(Color.red);
-            if (jTextField5.getText().equals(""))
-                jTextField5.setBackground(Color.red);
-            if (jTextField6.getText().equals(""))
-                jTextField6.setBackground(Color.red);
        }else{
           jTextField1.setBackground(Color.WHITE);
           jTextField2.setBackground(Color.WHITE);
           jTextField3.setBackground(Color.WHITE);
           jTextField4.setBackground(Color.WHITE);
-          jTextField5.setBackground(Color.WHITE);
-          jTextField6.setBackground(Color.WHITE);
        }
     }
     
@@ -360,16 +310,6 @@ public class CrearCita extends javax.swing.JDialog {
         // TODO add your handling code here:
          jTextField4.setBackground(Color.white);
     }//GEN-LAST:event_jTextField4MousePressed
-
-    private void jTextField5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField5MousePressed
-        // TODO add your handling code here:
-         jTextField5.setBackground(Color.white);
-    }//GEN-LAST:event_jTextField5MousePressed
-
-    private void jTextField6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField6MousePressed
-        // TODO add your handling code here:
-         jTextField6.setBackground(Color.white);
-    }//GEN-LAST:event_jTextField6MousePressed
 
     /**
      * @param args the command line arguments
@@ -419,18 +359,16 @@ public class CrearCita extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 
 }

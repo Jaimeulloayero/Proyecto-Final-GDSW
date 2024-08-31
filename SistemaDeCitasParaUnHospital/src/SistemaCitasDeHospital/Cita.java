@@ -1,22 +1,26 @@
 package SistemaCitasDeHospital;
+
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Cita {
     private String idDeCita;
     private String nombre;
     private String idDelPaciente;
     private String especialidad;
-    private String fecha;
-    private String hora;
+    private Date fechayHora;
     private boolean estado;
+    private ArrayList<FuncionesCita> funciones = new ArrayList<>();
     
     public Cita(){
     }
     
     public Cita(String idDecita, String nombre,
-            String idDelPaciente, String especialidad, String fecha, String hora,
+            String idDelPaciente, String especialidad, Date fecha,
             boolean estado){
         this.especialidad=especialidad;
         this.estado=estado;
-        this.fecha=fecha;
+        this.fechayHora=fechayHora;
         this.idDeCita=idDecita;
         this.idDelPaciente=idDelPaciente;
         this.nombre=nombre;
@@ -35,11 +39,8 @@ public class Cita {
     public String getEspecialidad(){
         return especialidad;
     }
-    public String getFecha(){
-        return fecha;
-    }
-    public String getHora(){
-        return hora;
+    public Date getFecha(){
+        return fechayHora;
     }
     public boolean isEstado(){
         return estado;
@@ -56,19 +57,32 @@ public class Cita {
     public void setEspecialidad(String especialidad){
         this.especialidad=especialidad;
     }
-    public void setFecha(String fecha){
-        this.fecha=fecha;
-    }
-    public void setHora(String hora){
-        this.hora=hora;
+    public void setFecha(Date fechayHora){
+        this.fechayHora=fechayHora;
     }
     public void isEstado(boolean estado){
         this.estado=estado;
     }
+
+    public Date getFechayHora() {
+        return fechayHora;
+    }
+
+    public void setFechayHora(Date fechayHora) {
+        this.fechayHora = fechayHora;
+    }
+
+    public ArrayList<FuncionesCita> getFunciones() {
+        return funciones;
+    }
+
+    public void setFunciones(ArrayList<FuncionesCita> funciones) {
+        this.funciones = funciones;
+    }
+    
     @Override
     public String toString(){
-        return "Cita{"+"nombre del paciente: " +nombre+ "id Del Paciente: "+idDelPaciente+
-                "/ id De Cita: "+idDeCita+"/ Fecha: "+fecha+"/ Hora: "+hora+"/ especialidad: "
-                +especialidad+"/ estado: "+estado+" }";
+        return String.valueOf(idDeCita);
     }
+    
 }

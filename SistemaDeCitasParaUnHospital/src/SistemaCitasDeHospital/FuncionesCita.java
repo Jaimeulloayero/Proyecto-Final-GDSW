@@ -1,6 +1,7 @@
 package SistemaCitasDeHospital;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class FuncionesCita {
     public ArrayList<Cita>citas= new ArrayList<>();
@@ -21,11 +22,10 @@ public class FuncionesCita {
            return indexOf;
     }
     public void actualizarCita(String id, String nombreDelPaciente, String idDelPaciente,
-            String especialidad, String fecha, String hora, boolean estado){
+            String especialidad, Date fechayHora, boolean estado){
         citas.get(buscarCita(id)).setEspecialidad(especialidad);
         citas.get(buscarCita(id)).isEstado(estado);
-        citas.get(buscarCita(id)).setFecha(fecha);
-        citas.get(buscarCita(id)).setHora(hora);
+        citas.get(buscarCita(id)).setFecha(fechayHora);
         citas.get(buscarCita(id)).setIdDelPaciente(idDelPaciente);
         citas.get(buscarCita(id)).setNombre(nombreDelPaciente);
     }
