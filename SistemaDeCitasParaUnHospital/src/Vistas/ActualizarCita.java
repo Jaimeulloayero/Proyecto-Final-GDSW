@@ -29,12 +29,7 @@ public class ActualizarCita extends javax.swing.JDialog {
         
     DefaultComboBoxModel<Cita> citas = new DefaultComboBoxModel<>();
     
-    for(Cita h: actualizar{
-            if (h.isEstado())
-                citas.addElement(h);
-        
-     jComboBox1.setModel(citas);   
-    }
+    //Aqui va una funcion de busqueda
     }
     /**
      * This method is called from within the constructor to initialize the form.
