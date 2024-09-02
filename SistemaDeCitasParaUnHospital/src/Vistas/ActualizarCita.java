@@ -7,6 +7,7 @@
 package Vistas;
 
 import SistemaCitasDeHospital.Cita;
+import SistemaCitasDeHospital.Informacion;
 import javax.swing.DefaultComboBoxModel;
 
 /**
@@ -14,7 +15,7 @@ import javax.swing.DefaultComboBoxModel;
  * @author jaime
  */
 public class ActualizarCita extends javax.swing.JDialog {
-         private Cita actualizar = null;
+         private Informacion inf = null;
     /**
      * Creates new form ActualizarCita
      */
@@ -23,9 +24,9 @@ public class ActualizarCita extends javax.swing.JDialog {
         initComponents();
     }
     
-    public ActualizarCita(Cita actualizar) {
+    public ActualizarCita(Informacion inf) {
         this(null, true);
-        this.actualizar=actualizar;
+        this.inf=inf;
         
     DefaultComboBoxModel<Cita> citas = new DefaultComboBoxModel<>();
     
