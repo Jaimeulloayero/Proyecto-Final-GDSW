@@ -7,13 +7,13 @@ public class Paciente {
     private String idPaciente;
     private String nombre;
     private List<Cita> citas;
-    private List<Paciente> pacientes;
+ //   private List<Paciente> pacientes;
     
     public Paciente(String idPaciente, String nombre){
         this.citas= new ArrayList<>();
         this.idPaciente=idPaciente;
         this.nombre=nombre;
-        this.pacientes= new ArrayList<>();
+      //  this.pacientes= new ArrayList<>();
     }
 
     public String getIdPaciente() {
@@ -38,19 +38,5 @@ public class Paciente {
 
     public void setCitas(List<Cita> citas) {
         this.citas = citas;
-    }
-    
-   
-        public void addpaciente(Paciente a){
-        pacientes.add(a);
-    }
-        
-    public void obtenerCitasProgramadas(){
-        List<Cita> citasProgramadas = new ArrayList<>();
-        for (Cita cita : citas){
-            if(cita.isEstado()){
-                System.out.println(cita);;
-            }
-        }
-    }
+    }   
 }
