@@ -1,6 +1,5 @@
 package SistemaCitasDeHospital;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Cita {
@@ -51,18 +50,14 @@ public class Cita {
     public void isEstado(boolean estado){
         this.estado=estado;
     }
-
     public Date getFechayHora() {
         return fechayHora;
     }
-
     public void setFechayHora(Date fechayHora) {
         this.fechayHora = fechayHora;
-    }
-    
+    }    
     @Override
     public String toString(){
         return String.valueOf(idDeCita);
     }
-    
 }

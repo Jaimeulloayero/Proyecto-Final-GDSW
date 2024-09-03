@@ -1,8 +1,5 @@
 package SistemaCitasDeHospital;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Paciente {
     private String idPaciente;
     private String nombre;
