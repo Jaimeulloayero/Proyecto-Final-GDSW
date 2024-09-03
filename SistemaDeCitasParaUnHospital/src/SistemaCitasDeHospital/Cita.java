@@ -56,8 +56,10 @@ public class Cita {
     public void setFechayHora(Date fechayHora) {
         this.fechayHora = fechayHora;
     }    
+
     @Override
-    public String toString(){
-        return String.valueOf(idDeCita);
+    public String toString() {
+        return "Cita{" + "idDeCita=" + idDeCita + ", especialidad=" + especialidad + ", fechayHora=" + fechayHora + ", estado=" + estado + '}';
     }
+        
 }
