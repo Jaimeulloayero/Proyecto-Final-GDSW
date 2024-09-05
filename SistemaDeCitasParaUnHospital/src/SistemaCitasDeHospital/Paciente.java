@@ -8,6 +8,8 @@ public class Paciente {
         this.idPaciente=idPaciente;
         this.nombre=nombre;
     }
+    public Paciente() {
+    }
     public String getIdPaciente() {
         return idPaciente;
     }
@@ -27,6 +29,5 @@ public class Paciente {
     @Override
     public String toString() {
         return "Paciente{" + "idPaciente=" + idPaciente + ", nombre=" + nombre + '}';
-    }
-    
+    }   
 }

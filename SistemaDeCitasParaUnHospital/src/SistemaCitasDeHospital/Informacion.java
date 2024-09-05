@@ -1,17 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package SistemaCitasDeHospital;
-
 import java.util.ArrayList;
-
-/**
- *
- * @author Doralis
- */
+import java.util.List;
 public class Informacion {
     ArrayList<Cita>cita = new ArrayList<>();
     ArrayList<Paciente> paciente = new ArrayList<>();
@@ -39,4 +28,18 @@ public class Informacion {
     public void addPaciente (Paciente p){
         paciente.add(p);
     }
+    public ArrayList<Cita> ListaCita(){
+        ArrayList<Cita> lista = new ArrayList<>();
+    for(Cita c : cita){
+        lista.add(c);
+    }
+    return lista;
+  }
+   public ArrayList<Paciente> ListaPaciente(){
+        ArrayList<Paciente> lista = new ArrayList<>();
+    for(Paciente p : paciente){
+        lista.add(p);
+    }
+    return lista;
+  }
 }

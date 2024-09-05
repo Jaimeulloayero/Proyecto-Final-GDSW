@@ -8,6 +8,7 @@ package Vistas;
 
 import SistemaCitasDeHospital.Cita;
 import SistemaCitasDeHospital.Informacion;
+import SistemaCitasDeHospital.Paciente;
 import java.awt.Color;
 import java.util.Date;
 import javax.swing.DefaultComboBoxModel;
@@ -301,10 +302,6 @@ public class CrearCita extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void refrescar(){
-        jTextField3.setText("");
-        jTextField4.setText("");
-    }
     private void agregarCita(){
         
         String nombre = jTextField1.getText();
@@ -313,9 +310,15 @@ public class CrearCita extends javax.swing.JDialog {
         String Especialidad = jTextField4.getText();
         Date fechayHora = (Date) jSpinner1.getModel().getValue();
         
-        Cita c = new Cita(IdCita, nombre, IdPaciente, Especialidad, fechayHora);
+        Cita c = new Cita(IdPaciente, Especialidad, fechayHora);
         inf.addCita(c);
+        Paciente p = new Paciente(IdPaciente, nombre);
+        inf.addPaciente(p);
         refrescar();
+    }
+    private void refrescar(){
+        jTextField3.setText("");
+        jTextField4.setText("");
     }
     private void makeErrorOrNot(boolean isError){
         if (isError){
