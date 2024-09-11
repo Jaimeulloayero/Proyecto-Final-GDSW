@@ -5,8 +5,7 @@
 
 ## **Principales Funciones:** 
 1. Permitir la entrada de todos los detalles y guardarlos en el sistema.
-2. Poder buscar la cita por ID y actualizar sus detalles.Ver citas programadas.
-3. Mostrar una lista de citas programadas para el paciente.
+2. Mostrar una lista de citas programadas para el paciente.
 
 ### Autores:
 1. __*Jaime Ulloa Yero*__
