@@ -7,7 +7,10 @@ public class Informacion {
 
     public Informacion() {
     }
-    
+    public Informacion(ArrayList<Cita> cita , ArrayList<Paciente> paciente){
+        this.cita = cita ;
+        this.paciente = paciente;
+    }
     public ArrayList<Cita> getCita() {
         return cita;
     }
